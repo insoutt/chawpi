@@ -1,0 +1,39 @@
+{
+  "main": "dist/index.js",
+  "name": "@insoutt/chawpi",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "A demo package for Total TypeScript",
+  "keywords": [
+    "demo",
+    "typescript"
+  ],
+  "scripts": {
+    "dev": "vitest",
+    "build": "tsc",
+    "ci": "yarn build && yarn check-format && yarn check-exports && yarn test",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "test": "vitest run"
+  },
+  "homepage": "https://github.com/insoutt/chawpi",
+  "bugs": {
+    "url": "https://github.com/insoutt/chawpi/issues"
+  },
+  "author": "Matt Pocock <team@totaltypescript.com> (https://totaltypescript.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/insoutt/chawpi.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.4",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.8"
+  }
+}
